@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Music</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <header>
+        <ul class="main">
+            <center><Li>MUSIC PRO</Li></center>
+        </ul>
+        <div class="clearfix">
+                <div class="box">
+                    <h2>Chill Music</h2>
+                    <a href="#" class="btn">By The Croft - Joakim Karud<br><br></a>
+                    <a href="#" class="btn">Love Mode - Joakim Karud<br><br></a>
+                    <a href="#" class="btn">Great Days - Joakim Karud<br><br></a>
+                    <a href="#" class="btn">Road Trip - Joakim Karud</a>
+                </div>
+                <div class="box">
+                    <h2>Pop Music</h2>
+                    <a href="#" class="btn">Yummy - Justin Bieber<br><br></a>
+                    <a href="#" class="btn">Call out my name - The Weeknd<br><br></a>
+                    <a href="#" class="btn">7 Years - Lukas Graham<br><br></a>
+                    <a href="#" class="btn">There Nothing Hold Me Back - Shawn Mendes</a>
+                </div>
+        </div>
+        <div class="profile">
+            <div class="img-fi">
+                <center>
+                      <img src="https://img.icons8.com/nolan/48/facebook-circled.png" >
+                      <a href="https://www.facebook.com/profile.php?id=100034499171734"  class="btn-face">Facebook</a>
+                      <img src="https://img.icons8.com/nolan/48/instagram-new.png">
+                      <a href="https://www.instagram.com/i_am_huy_71/" class="btn-instra">Instagram </a>
+                </center>
+            </div>
+        </div>
+        <div class="music" id="music" >
+            <center>
+                <audio controls>
+                    <source src="../music/Baby - Alembic.mp3">
+                </audio>
+            </center>
+        </div>
+        <script type="text/javascript">
+            var element = document.getElementsByClassName('btn');
+                for(i=0; i<element.length; i++){
+                    element[i].onclick = function (){
+                        document.getElementById('music').innerHTML = '<center><audio controls><source src="../music/'+this.innerText+'.mp3"></audio></center>';
+                    return false;
+                };
+            }
+        </script>
+    </header>
+</body>
+</html>
